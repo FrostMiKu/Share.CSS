@@ -82,6 +82,15 @@ figcaption {
     }
 }
 
+@media screen and (max-width: 32rem) {
+    #main {
+        padding: 4rem 2rem 2rem 2rem;
+    }
+    #content h2::before {
+        left: 1rem!important;
+    }
+}
+
 #title {
     text-align: center;
     margin-block-end: 24px;
