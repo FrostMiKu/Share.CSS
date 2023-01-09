@@ -10,8 +10,7 @@ Can also be used for paper page.
 
 - After:
 ![Origin](screenshot/page.png)
-![tree page](screenshot/treepage.png)
-![mobile page](screenshot/mobile.png)
+<img src="screenshot/treepage.png" height="400px">&nbsp;<img src="screenshot/mobile.png" height="400px">
 
 ## How to use
 
