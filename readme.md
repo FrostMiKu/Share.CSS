@@ -6,12 +6,12 @@ Can also be used for paper page.
 ## Screenshot
 
 - Before:
-![Origin](screenshot\before.png)
+![Origin](screenshot/before.png)
 
 - After:
-![Origin](screenshot\page.png)
-![tree page](screenshot\treepage.png)
-![mobile page](screenshot\mobile.png)
+![Origin](screenshot/page.png)
+![tree page](screenshot/treepage.png)
+![mobile page](screenshot/mobile.png)
 
 ## How to use
 
