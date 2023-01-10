@@ -7,7 +7,7 @@ body {
 
 a {
     text-decoration: none;
-    color:  var(--blue);
+    color: var(--blue);
 }
 
 a:hover {
@@ -24,10 +24,6 @@ img {
     height: auto;
     max-width: 100%;
     max-height: 100%;
-}
-
-figcaption {
-    color: var(--gray)!important;
 }
 
 #layout {
@@ -51,10 +47,12 @@ figcaption {
         box-shadow: var(--shadow);
         border-radius: 4px 4px 0px 0px;
     }
+
     #toggleMenuButton {
         right: 1rem;
         top: 1rem;
     }
+
     #menu {
         margin-block-start: 6rem;
         width: 18rem;
@@ -65,10 +63,12 @@ figcaption {
     #main {
         width: 100%;
     }
+
     #toggleMenuButton {
         right: 1rem;
         bottom: 1rem;
     }
+
     #menu {
         margin-left: 6rem;
         width: 100%;
@@ -86,8 +86,9 @@ figcaption {
     #main {
         padding: 4rem 2rem 2rem 2rem;
     }
+
     #content h2::before {
-        left: 1rem!important;
+        left: 1rem !important;
     }
 }
 
@@ -110,7 +111,9 @@ figcaption {
     letter-spacing: 0.02em;
 }
 
-#content h2, h3 {
+#content h2,
+h3,
+h4 {
     color: #000;
     line-height: 36px;
     padding: 5px 0px;
@@ -131,6 +134,10 @@ figcaption {
 
 #content h3 {
     font-size: 20px;
+}
+
+#content h4 {
+    font-size: 16px;
 }
 
 #content p {
@@ -159,11 +166,17 @@ figcaption {
 #noteClippedFrom {
     color: var(--gray);
     margin-bottom: 0.5rem;
-    font-style:italic;
+    font-style: italic;
 }
 
+.table {
+    overflow-wrap: anywhere;
+}
+
+/* Menu */
+
 #toggleMenuButton {
-    position:fixed;
+    position: fixed;
     background: white;
     padding: 0.5rem 1.25rem;
     border: none;
@@ -171,10 +184,11 @@ figcaption {
     border-radius: 4px;
     letter-spacing: 0.05em;
 }
+
 #toggleMenuButton::before {
     content: "Menu";
     color: var(--blue);
-} 
+}
 
 #menu {
     display: none;
@@ -184,8 +198,8 @@ figcaption {
     display: block;
 }
 
-#menu strong{
-    color:  var(--blue-strong);
+#menu strong {
+    color: var(--blue-strong);
 }
 
 nav.grid ul {
@@ -193,6 +207,7 @@ nav.grid ul {
     flex-flow: row wrap;
     gap: 1rem;
 }
+
 nav.list {
     line-height: 1.5;
 }
@@ -208,6 +223,7 @@ nav ul {
     left: -3rem;
     top: -1rem;
 }
+
 #parentLink::before {
     content: "@";
 }
@@ -217,4 +233,5 @@ nav ul {
     --blue: #409EFF;
     --blue-strong: #307bc7;
     --gray: gray;
+    --ck-color-table-caption-text: gray;
 }
