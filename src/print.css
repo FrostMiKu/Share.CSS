@@ -1,0 +1,114 @@
+@media print {
+    body {
+    color: #000;
+    background-color: #fff; 
+    counter-reset: page;
+    } 
+     
+    a {
+    text-decoration: none;
+    color: inherit;
+    }    
+
+    #main {
+    contain: content;
+    background: none;
+    padding: 0rem 0rem 0rem 0rem;
+    }    
+
+    #title {
+    font-size: 21pt;
+    }
+
+    #content {
+    font-size: 12pt;
+    line-height: 1.5;
+    }
+
+    #content h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    
+    #content h2 {
+        font-size: 18pt;
+        text-indent: 3%;
+        }
+    #content h3 {
+        font-size: 16.5pt;
+        text-indent: 4%;
+    }
+    #content h4 {
+        font-size: 14.75pt;
+        text-indent: 5%;
+    }
+     #content h5 {
+         font-size: 13.5pt;
+        text-indent: 6%;
+
+     }
+     #content h6 {
+         font-size: 12.75pt;
+        text-indent: 7%;
+     }     
+    #content p {
+        orphans: 2;
+        widows: 3;
+        text-indent: 3%;
+    }
+      
+    blockquote::before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        position: absolute;
+        left: 38px;
+    }
+     
+     #content blockquote {
+        background-color: #fff;
+        quotes: "«\00A0" "\00A0»";
+    }
+     
+    #content blockquote p {
+        orphans: 4;
+        widows: 5;
+     }
+     #content blockquote p:last-of-type {
+        page-break-before: avoid;
+    }
+    
+    #toggleMenuButton, nav, #parentLink {
+        display: none;
+    }
+    
+    #pageFooter {
+        page-break-before: always;
+        counter-increment: page;
+    }
+    
+    #pageFooter:after {
+        display: block;
+        text-align: right;
+        content: "Page " counter(page);
+    }
+    
+    #pageFooter.first.page
+    {
+        page-break-before: avoid;
+    }
+
+   
+    .table, figure {
+        page-break-inside: avoid;
+    }
+    
+    @page {
+        size: A4;
+        @bottom-center {
+            content: counter(page);
+    }        
+    margin: 1.5cm 2.5cm;  /* use centimeters or inches depending on your needs */
+    }
+}

@@ -48,13 +48,15 @@ iframe {
 #title {
     text-align: center;
     margin-block-end: 24px;
-    font-size: 32px;
+    font-size: 36px;
     line-height: 48px;
     letter-spacing: 0.02em;
+    margin-bottom: 2.5em;
+    counter-reset: h2counter;
 }
 
 #content {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     -webkit-font-smoothing: subpixel-antialiased;
     line-height: 1.5;
@@ -64,6 +66,30 @@ iframe {
     letter-spacing: 0.02em;
 }
 
+/* Décompte titres */
+
+#content h2::before {
+    counter-increment: h2counter;
+    content: counter(h2counter) ") ";
+}
+
+#content h3::before {
+    counter-increment: h3counter;
+    content: counter(h2counter) "." counter(h3counter, lower-alpha) ") ";
+}
+
+#content h4::before {
+    counter-increment: h4counter;
+    content: counter(h2counter) "." counter(h3counter, lower-alpha) "." counter(h4counter, lower-roman) ") ";
+}
+
+#content h5::before {
+    counter-increment: h5counter;
+    content: counter(h5counter, upper-alpha) ") ";
+}
+
+/* Polices */
+
 #content h2, h3, h4 {
     color: #000;
     line-height: 36px;
@@ -72,23 +98,44 @@ iframe {
     font-weight: 800;
 }
 
-#content h2::before {
-    content: '#';
-    color: var(--blue);
-    position: absolute;
-    left: 5rem;
-}
-
 #content h2 {
-    font-size: 24px;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-top: 2em;
+    counter-reset: h3counter;
 }
 
 #content h3 {
-    font-size: 20px;
+    font-size: 24px;
+    text-indent: 3%;
+    text-decoration: underline;
+    counter-reset: h4counter;
 }
 
 #content h4 {
-    font-size: 16px;
+    font-size: 20px;
+    text-indent: 4%;
+    counter-reset: h5counter;
+    font-style: italic
+}
+
+#content h5, h6 {
+    color: #000;
+    line-height: 30px;
+    padding: 5px 0px;
+    letter-spacing: 0.02em;
+    font-style: normal;
+}
+
+#content h5 {
+    font-size: 19px;
+    text-indent: 5%;
+    font-weight: 800;
+}
+#content h6 {
+    font-size: 18px;
+    text-indent: 6%;
+    font-weight: normal;
 }
 
 #content p {
@@ -112,6 +159,8 @@ iframe {
     padding-inline-start: 16px;
     padding-inline-end: 16px;
     background-color: hsla(0deg, 0%, 0%, 0.054);
+    text-indent: 3%;
+    quotes: "«\00A0" "\00A0»";
 }
 
 #noteClippedFrom {
