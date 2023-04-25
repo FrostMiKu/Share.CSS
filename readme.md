@@ -3,6 +3,8 @@
 Sharing theme for Trilium Note.
 Can also be used for paper page.
 
+This fork added title enumeration and Print css for better printing layout. 
+
 ## Screenshot
 
 - Before:
@@ -15,11 +17,11 @@ Can also be used for paper page.
 
 ## How to use
 
-1. copy `src/share.css` and create a new note
-2. clone this note into your Sharing Tree
-3. add a ~shareCss relation to the share.css code note which will be linked in the shared page
-    1. in case you want this to apply to the whole subtree, don't forget to make the label inheritable
-    2. If you want to hide this css code note from left tree navigation, add #shareHiddenFromTree label to the CSS code note.
+1. import `src/share.css` and `src/print.css` in trilium
+2. clone the notes into your Sharing Tree
+3. add two ~shareCss relations, pointing to the share.css and the print.css code notes which will be linked in the shared page
+    1. in case you want this to apply to the whole subtree, add the ~shareCss relations to the top level "Shared Notes" note in your Sharing Tree. Don't forget to make the label inheritable.
+    2. If you want to hide this css code note from left tree navigation, add #shareHiddenFromTree label to the CSS code notes.
 
 [See the Trilium wiki for more information](https://github.com/zadam/trilium/wiki/Sharing)
 
